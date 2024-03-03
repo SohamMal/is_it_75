@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#Home{
+    height: 100vh;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; 
+    background-color: #f0f0f0;
+    line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+    background-color: #4CAF50;
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+    padding: 1% 12vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li:hover {
+    transform: translateY(-3px);
+}
+
+
+.Profile-img {
+    width: 50px;
+    height: 50px; /* Set height to match other items */
+}
+
+.logo-img {
+    width: 50px;
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover{
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-item {
+        display: none; /* Hide the About and Tutorial items on small devices */
+    }
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    /* background-color: rgba(256, 256, 256, 0.8); */
+    border-radius: 10px;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content button {
+    background-color: red;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    text-align: left;
+}
+
+.dropdown-content button:hover {
+    background-color: darkred;
+}
+
+.profile-icon:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Cards */
+.card-container {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Cards */
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    transition: transform 0.3s ease;
+    padding: 20px 0px;
+    width: calc((100% - 80px) / 3);
+    max-width: 365px;
+}
+
+/* For medium screens - Two cards per row */
+@media only screen and (max-width: 991px) {
+    .card {
+        width: calc((100% - 60px) / 2);
+        max-width: 325px;
+    }
+}
+
+/* For small screens - One card per row */
+@media only screen and (max-width: 600px) {
+    .card {
+        width: calc(100% - 40px);
+        max-width: 325px;
+    }
+}
+
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 16px;
+    font-size: 20px;
+    color: #333;
+    font-weight: bold; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-content {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.percentage {
+    font-size: 20px;
+    color: #666;
+    font-family: "Arvo", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.add-class > button {
+    border: none;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-class > button:hover {
+    transform: scale(1.1); 
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+/* View All button style */
+.view button {
+    background-color: #FAA300;
+    color: white; 
+    border: none; 
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.view button:hover {
+    transform: scale(1.1); 
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+.delete{
+    border: none;
+}
+.delete:hover{
+    transform: scale(1.2);
+}
+
+/* AddClass Component Styles */
+
+/* Container */
+.form-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Title */
+.form-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Form Labels */
+.form-container label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Form Inputs */
+select,
+.form-container input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Checkbox Label */
+.form-container label.checkbox-label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Checkbox Input */
+.form-container input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Submit Button */
+.form-container button[type="submit"] {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for Submit Button */
+.form-container button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* signin/signup */
+
+.outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+  
+.logo-img {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+}
+.logo-container{
+    background-color: #4CAF50; /* Greenish background color */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+}
+
+  
+.container h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+  
+.container input[type="email"],
+.container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+  
+.container button[type="submit"] {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50; /* Greenish background color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+}
+  
+.container button[type="submit"]:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
