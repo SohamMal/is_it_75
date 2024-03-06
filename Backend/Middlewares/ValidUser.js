@@ -13,7 +13,7 @@ const ValidUser=(req, res, next)=>{
             req.user_id = value.user_id;
             next();
         } else {
-            res.status(403).json({ msg: "Authentication Error" });
+            res.status(403).json({ msg: "Not Signed In" });
         }
     }catch(e){
         res.status(403).json({
